@@ -6,8 +6,7 @@ var fileServer = new NodeStatic.Server('.');
 
 var index = process.argv[2]
 var ignore = process.argv.slice(3,process.argv.length).join('|');
-
-console.log(ignoreRegex);
+var ignoreRegex = new RegExp('^\/('+ ignore +')','g');
 
 http.createServer(function(req, res) {
   req.addListener('end', function() {

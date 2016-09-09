@@ -1,5 +1,7 @@
 # SPA Host
 
+[![npm version](https://badge.fury.io/js/spa-host.svg)](https://badge.fury.io/js/spa-host)
+
 ## Easily host applications that have a default file to route requests through, yet need to override a set of folders
 
 ### Installation

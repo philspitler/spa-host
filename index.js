@@ -10,10 +10,10 @@ var ignoreRegex = new RegExp('^\/('+ ignore +')','g');
 
 http.createServer(function(req, res) {
   req.addListener('end', function() {
-    if (req.url.search(ignoreRegex) === 0) {
-      fileServer.serve(req, res);
-    } else {
+    if (req.url === '/' || req.url.search(ignoreRegex) === -1) {
       fileServer.serveFile('./' + index, 200, {}, req, res);
+    } else {
+      fileServer.serve(req, res);
     }
   }).resume();
 }).listen(3000);

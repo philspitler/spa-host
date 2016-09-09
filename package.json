@@ -1,6 +1,6 @@
 {
   "name": "spa-host",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "repository": "philspitler/spa-host",
   "main": "index.js",

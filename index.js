@@ -16,4 +16,4 @@ http.createServer(function(req, res) {
       fileServer.serve(req, res);
     }
   }).resume();
-}).listen(3000);
+}).listen(process.env.PORT || 3000);

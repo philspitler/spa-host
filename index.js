@@ -3,6 +3,7 @@
 var http = require('http');
 var NodeStatic = require('node-static');
 var fileServer = new NodeStatic.Server('.');
+var serverPort = process.env.PORT || 3000;
 
 var index = process.argv[2]
 var ignore = process.argv.slice(3,process.argv.length).join('|');
@@ -16,4 +17,6 @@ http.createServer(function(req, res) {
       fileServer.serve(req, res);
     }
   }).resume();
-}).listen(process.env.PORT || 3000);
+}).listen(serverPort, function() {
+  console.log('Server running on port ' + serverPort + '.');
+});

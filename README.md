@@ -14,6 +14,11 @@ $ npm install -g spa-host
 $ spahost index.html styles scripts
 ```
 
+### Run on a specific port (5000 in this case)
+```bash
+$ PORT=5000 spahost index.html styles scripts
+```
+
 This will run a server which routes all traffic to index.html unless it starts with /styles or /scripts.
 
 ### Notes
